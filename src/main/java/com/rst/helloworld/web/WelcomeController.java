@@ -34,7 +34,7 @@ public class WelcomeController {
 		return "index";
 	}
 
-	@GetMapping(path = "/greeting") // Compliant
+	@GetMapping(path = "/greeting") 
         public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         ...
         }
