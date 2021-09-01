@@ -34,8 +34,10 @@ public class WelcomeController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
-	public ModelAndView hello(@PathVariable("name") String name) {
+	@GetMapping(path = "/greeting") // Compliant
+        public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+        ...
+        }
 
 		logger.debug("hello() is executed - $name {}", name);
 
